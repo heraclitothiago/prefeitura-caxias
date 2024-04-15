@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Requerimento Servidor Público Municipal</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="./script.js" defer></script>
+</head>
+
+<body>
+    <div class="container">
+        <div id="requerimento">
+            <div class="box-xl"></div>
+            <div class="box-sm"></div>
+            <div class="row head">
+                <div class="col flex">
+                    <img src="http://caxias.ma.gov.br/wp-content/uploads/2020/08/brasao-caxias.png" alt="logo">
+                </div>
+                <div class="col">
+                    <h1>ESTADO DO MARANHÃO</h1>
+                    <h2>PREFEITURA MUNICIPAL DE CAXIAS</h2>
+                </div>
+                <div class="col">
+                    <div class="row header text-center">nº protocolo</div>
+                    <div class="row"><span id="protocolo"></span></div>
+                    <div class="row header text-center">data entrada</div>
+                    <div class="row text-center"><span id="data-entrada"></span></div>
+                </div>
+            </div>
+            <div class="row header text-center">REQUERIMENTO SERVIDOR PÚBLICO MUNICIPAL</div>
+            <div class="row-3">
+                <div class="col header">NOME</div>
+                <div class="col header">RG</div>
+                <div class="col header">CPF</div>
+                <div class="col"><span id="nome-completo"></span></div>
+                <div class="col"><span id="rg"></span></div>
+                <div class="col"><span id="cpf"></span></div>
+            </div>
+            <div class="row">
+                <div class="col-10 header">ENDEREÇO</div>
+                <div class="col"><span id="endereco"></span></div>
+            </div>
+            <div class="row-3">
+                <div class="col header">CARGO/FUNÇÃO</div>
+                <div class="col header">ADMISSÃO</div>
+                <div class="col header">MATRÍCULA</div>
+                <div class="col"><span id="cargo"></span></div>
+                <div class="col"><span id="admissao"></span></div>
+                <div class="col"><span id="matricula"></span></div>
+            </div>
+            <div class="row-2">
+                <div class="col-10 header">LOTAÇÃO (SECRETARIA À QUAL PERTENCE)</div>
+                <div class="col header">TURNO</div>
+                <div class="col"><span id="lotacao"></span></div>
+                <div class="col"><span id="turno"></span></div>
+            </div>
+            <div class="row-2">
+                <div class="col-10 header">email</div>
+                <div class="col header">fone</div>
+                <div class="col"><span id="email"></span></div>
+                <div class="col"><span id="fone"></span></div>
+            </div>
+            <div class="row header text-center">BENEFÍCIO REQUERIDO (assinale com um x)</div>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>afastamento processo de aposentadoria</td>
+                        <td>licença mandato eletivo</td>
+                    </tr>
+                    <tr>
+                        <td>ajuda de custo</td>
+                        <td>licença maternidade</td>
+                    </tr>
+                    <tr>
+                        <td>AFASTAMENTO PROCESSO DE APOSENTADORIA </td>
+                        <td>LICENÇA 1 MANDATO ELETIVO</td>
+                    </tr>
+                    <tr>
+                        <td>AJUDA DE CUSTO </td>
+                        <td>LICENÇA MATERNIDADE</td>
+                    </tr>
+                    <tr>
+                        <td>ANUÊNIO </td>
+                        <td>LICENÇA PRÊMIO</td>
+                    </tr>
+                    <tr>
+                        <td>APOSENTADORIA </td>
+                        <td>LICENÇA PATERNIDADE</td>
+                    </tr>
+                    <tr>
+                        <td>AUXILIO NATALIDADE </td>
+                        <td>LICENÇA POR MOT. DE DOENÇA DE PESSOA DA FAMÍLIA</td>
+                    </tr>
+                    <tr>
+                        <td>AUXILIO FUNERAL </td>
+                        <td>LICENÇA SEM VENCIMENTOS</td>
+                    </tr>
+                    <tr>
+                        <td data-js="stop">AUXILIO TRANSPORTE </td>
+                        <td>LICENÇA PARA TRATAMENTO DE SAÚDE</td>
+                    </tr>
+                    <tr>
+                        <td>ZONA URBANA</td>
+                        <td>LICENÇA TRATAR DE INTERESSE PARTICULAR</td>
+                    </tr>
+                    <tr>
+                        <td>ZONA RURAL</td>
+                        <td>MUDANÇA DE NÍVEL</td>
+                    </tr>
+                    <tr>
+                        <td>CANCELAMENTO LICENÇA SEM VENCIMENTO</td>
+                        <td>MUDANÇA DE NOME</td>
+                    </tr>
+                    <tr>
+                        <td>CANCELAMENTO LICENÇA PRÊMIO</td>
+                        <td>PAGAMENTO 1/3 DE FÉRIAS</td>
+                    </tr>
+                    <tr>
+                        <td>CERTIDÃO TEMPO DE SERVIÇO </td>
+                        <td>PAGAMENTO ADICIONAL 100% (DOBRA DE TURNO)</td>
+                    </tr>
+                    <tr>
+                        <td>DEVOLUÇÃO SECRETARIA DE ADMINISTRAÇÃO</td>
+                        <td>PAGAMENTO ATRASADOS</td>
+                    </tr>
+                    <tr>
+                        <td>DOBRA DE TURNO </td>
+                        <td>PENSÃO</td>
+                    </tr>
+                    <tr>
+                        <td>EXONERAÇÃO CARGO COMISSIONADO OU FUNÇÃO CONFIANÇA </td>
+                        <td>
+                            <input type="checkbox" id="vitalicia">
+                            <label for="vitalicia">VITALÍCIA</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>EXONERAÇÃO SERVIÇO PÚBLICO MUNICIPAL (DESLIGAMENTO) </td>
+                        <td>
+                            <input type="checkbox" id="por-morte">
+                            <label for="por-morte">POR MORTE</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>FÉRIAS</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>FUNÇÃO DE CONFIANÇA</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>FUNÇÃO GRATIFICADA</td>
+                        <td>RETIFICAÇÃO</td>
+                    </tr>
+                    <tr>
+                        <td data-js="stop">GRATIFICAÇÃO</td>
+                        <td>Nº RG (identidade)</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="checkbox" id="de-insalubridade">
+                            <label for="de-insalubridade">DE INSALUBRIDADE </label>
+                        </td>
+                        <td>
+                            <input type="checkbox" id="data-de-admissao">
+                            <label for="data-de-admissao">DATA DE ADMISSÃO</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="checkbox" id="de-nivel-superior">
+                            <label for="de-nivel-superior">DE NÍVEL SUPERIOR</label>
+                        </td>
+                        <td>
+                            <input type="checkbox" id="data-de-nascimento">
+                            <label for="data-de-nascimento">DATA DE NASCIMENTO</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="checkbox" id="de-periculosidade">
+                            <label for="de-periculosidade">DE PERICULOSIDADE</label>
+                        </td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>GRATIFICAÇÃO POR TEMPO DE SERVIÇO</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>GRATIFICAÇÃO DE INCENTIVO</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="checkbox" id="de-ensino-medio">
+                            <label for="de-ensino-medio">DE ENSINO MÉDIO</label>
+                        </td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>DE ENSINO EXCEPCIONAL </td>
+                        <td>REMOÇÃO OUTRO ORGÃO OU SECRETARIA</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="checkbox" id="de-ensino-superior">
+                            <label for="de-ensino-superior">DE ENSINO SUPERIOR</label>
+                        </td>
+                        <td>REDUÇÃO DE CARGA HORÁRIA</td>
+                    </tr>
+                    <tr>
+                        <td>INCORPORAÇÃO DE TEMPO DE SERVIÇO </td>
+                        <td>SALARIO FAMÍLIA</td>
+                    </tr>
+                    <tr>
+                        <td>LICENÇA A ADOTANTE </td>
+                        <td>VALE TRANSPORTE</td>
+                    </tr>
+                    <tr>
+                        <td>LICENÇA ATIVIDADE POLÍTICA </td>
+                        <td>OUTROS:</td>
+                    </tr>
+                    <tr>
+                        <td>LICENÇA ESTUDOS</td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="col">
+                <div class="row documentos-anexados">Tendo anexado <div contenteditable="true"></div> documentos
+                    necessários ao pleito, presta as seguintes informações
+                    complementares:</div>
+                <div class="row">&nbsp;</div>
+                <div class="row">&nbsp;</div>
+                <div class="row">&nbsp;</div>
+                <div class="row">&nbsp;</div>
+            </div>
+            <div class="row">
+                <p>Caxias, <span id="data-hoje"></span></p>
+            </div>
+            <div class="assinatura">Assinatura</div>
+        </div>
+    </div>
+</body>
+
+</html>
